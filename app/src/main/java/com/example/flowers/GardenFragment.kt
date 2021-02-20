@@ -44,11 +44,6 @@ class GardenFragment : Fragment() {
             binding.hasPlantings = !result.isNullOrEmpty()
             adapter.submitList(result)
         })
-        viewModel.plants.observe(viewLifecycleOwner, Observer { result ->
-            for (plant in result) {
-                Log.e("TAG", "${plant.name}")
-            }
-        })
     }
 
     private fun navigateToPlantListPage() {

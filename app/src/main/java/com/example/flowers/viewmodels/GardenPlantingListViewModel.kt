@@ -17,7 +17,4 @@ class GardenPlantingListViewModel @ViewModelInject internal constructor(
     val plantAndGardenPlantings: LiveData<List<PlantAndGardenPlantings>> =
         gardenPlantingRepository.getPlantedGardens().asLiveData()
 
-    val plants: LiveData<List<Plant>> =
-        plantRepository.getPlants().asLiveData()
-
 }

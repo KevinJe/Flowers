@@ -15,7 +15,7 @@ import com.google.android.material.shape.ShapeAppearancePathProvider
  * working around it for now.
  */
 class MaskedCardView @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = R.attr.materialCardViewStyle
 ) : MaterialCardView(context, attrs, defStyleAttr) {
     private val pathProvider = ShapeAppearancePathProvider()
     private val path: Path = Path()
