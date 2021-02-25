@@ -18,6 +18,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        // Consult the README on instructions for setting up Unsplash API key
+        buildConfigField("String", "UNSPLASH_ACCESS_KEY", "\"" + getUnsplashAccess() + "\"")
+
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments["dagger.hilt.disableModulesHaveInstallInCheck"] = "true"
@@ -87,5 +90,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
 
+def getUnsplashAccess() {
+    return project.findProperty("unsplash_access_key")
 }

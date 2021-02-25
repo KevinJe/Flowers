@@ -1,7 +1,6 @@
 package com.example.flowers
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,8 +34,6 @@ class HomeViewPagerFragment : Fragment() {
         }.attach()
 
         (activity as AppCompatActivity).setSupportActionBar(binding.toolBar)
-
-        Log.e("TAG", "TAG")
 
         return binding.root
     }
