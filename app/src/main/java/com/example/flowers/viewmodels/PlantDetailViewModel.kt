@@ -1,6 +1,5 @@
 package com.example.flowers.viewmodels
 
-import androidx.hilt.Assisted
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
@@ -8,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.flowers.BuildConfig
 import com.example.flowers.data.GardenPlantingRepository
 import com.example.flowers.data.PlantRepository
+import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
 
@@ -33,16 +33,16 @@ class PlantDetailViewModel @AssistedInject constructor(
 
     @AssistedInject.Factory
     interface AssistedFactory {
-        fun create(planted: String): PlantDetailViewModel
+        fun create(plantId: String): PlantDetailViewModel
     }
 
     companion object {
         fun provideFactory(
             assistedFactory: AssistedFactory,
-            planted: String
+            plantId: String
         ): ViewModelProvider.Factory = object: ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-                return assistedFactory.create(planted) as T
+                return assistedFactory.create(plantId) as T
             }
 
         }

@@ -22,12 +22,25 @@
     <fragment
         android:id="@+id/plant_detail_fragment"
         android:name="com.example.flowers.PlantDetailFragment"
-        android:label="PlantDetailFragment">
+        android:label="PlantDetailFragment"
+        tools:layout="@layout/fragment_plant_detail">
+
+        <action
+            android:id="@+id/action_plant_detail_fragment_to_galleryFragment"
+            app:destination="@id/gallery_fragment" />
 
         <argument
             android:name="plantId"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gallery_fragment"
+        android:name="com.example.flowers.GalleryFragment"
+        android:label="GalleryFragment">
 
+        <argument
+            android:name="plantName"
+            app:argType="string" />
     </fragment>
 
 </navigation>

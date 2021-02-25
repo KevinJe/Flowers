@@ -15,7 +15,7 @@
     <!-- String plurals and their related prefix / suffix strings -->
     <string name="watering_needs_prefix" translation_description="Prefix for the text describing how often a plant should be watered. Used in combination with watering_needs_suffix.">Watering needs</string>
     <string name="added_plant_to_garden" translation_description="Confirmation text that is shown when a user adds a plant to their empty garden.">Added plant to garden</string>
-
+    <string name="share_text_plant" translation_description="The default messaged used when sharing a plant on SNS, etc.">Check out the %s plant in the Android Sunflower app</string>
     <plurals name="watering_needs_suffix">
         <item quantity="one" translation_description="Suffix for the text describing how often a plant should be watered, singular. Used in combination with watering_needs_prefix: 'Watering needs: every day'.">every day</item>
         <item quantity="other" translation_description="Suffix for the text describing how often a plant should be watered, plural. Used in combination with watering_needs_prefix: 'Watering needs: every 8 days'.">every %d days</item>
@@ -28,5 +28,7 @@
     </plurals>
 
     <string name="gallery_content_description" translation_description="Content description for the clickable image to navigate to the gallery screen">Navigate to gallery screen</string>
+    <string name="gallery_title" translation_description="Title for the photo gallery screen">Photos by Unsplash</string>
+
 
 </resources>
